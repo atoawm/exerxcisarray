@@ -13,3 +13,27 @@ Enter #4 score: 9
 #output
 Average Score: 7.5
 */
+
+#include <iostream>
+using namespace std;
+int main(){
+    float name[4]={0};
+    int max=0;
+    int min =10000;
+    for(int i=0;i<4;i++){
+        cout<<"Enter #"<<i+1<<" score: ";
+        int a;
+        cin>>a;
+        name[i]=a;
+    }for(int i=0;i<4;i++){
+        if(name[i]>max){
+        max = name[i];
+        }if(name[i]<min){
+        min = name[i];
+        }
+    }
+    float avg = ((name[0]+name[1]+name[2]+name[3])-(min+max))/2;
+    cout<<"Average Score: "<<avg;
+
+return 0;
+}

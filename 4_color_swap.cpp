@@ -21,17 +21,40 @@ Enter color locations to swap: 4 6
 All colors sorted!
 */
 
-string c[6] = {"Orange", "Red", "Violet", "Yellow", "Blue", "Green"};
+#include <iostream>
+using namespace std;
+int main(){
+    string c[6] = {"Orange", "Red", "Violet", "Yellow", "Blue", "Green"};
+    string me;
+    me = c[0];
+    int a;
+    int b;
 
 cout << "{" << c[0] << " " << c[1] << " "
      << c[2] << " " << c[3] << " "
      << c[4] << " " << c[5] << "}" << "\n" 
      << "--------------------------------------\n";
+
 while (true)
-{
-    if (_______)
-    {
+{   
+    if (c[0]=="Red" && c[1]=="Orange" && c[2]=="Yellow" && c[3] =="Green" && c[4]=="Blue" && c[5]=="Violet"){
         cout << "All colors sorted!";
         break;
+    }else{
+        cout <<"Enter color locations to swap: ";
+        cin>> a;
+        cin>>b;
+        me =c[a-1];
+        c[a-1]=c[b-1];
+        c[b-1]=me;
+        cout << "{" << c[0] << " " << c[1] << " "
+     << c[2] << " " << c[3] << " "
+     << c[4] << " " << c[5] << "}" << "\n" 
+     << "--------------------------------------\n";
+        }
+        
     }
+    return 0;
 }
+    
+
